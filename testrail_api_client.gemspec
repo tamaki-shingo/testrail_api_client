@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "TestRail API V2 Wrapper in Ruby"
   spec.description   = "It's implimentation for TestRail API V2"
-  spec.homepage      = "nothing"
+  spec.homepage      = "https://github.com/tamaki-shingo/testrail_api_client/wiki"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
   spec.metadata["allowed_push_host"] = "Nothing"
