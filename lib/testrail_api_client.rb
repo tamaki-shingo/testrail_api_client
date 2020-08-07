@@ -6,7 +6,6 @@ require 'typhoeus'
 require 'json'  
 
 module TestrailApiClient
-  class Error < StandardError; end
   class Client
     include TestRail::TestrailApiClient
 
@@ -39,7 +38,7 @@ module TestrailApiClient
 
     def request(method, path, opts = {})
       body = Typhoeus::Request.new(
-          File.join(api_endpoint, path),
+        File.join(api_endpoint, path),
           { method:  method,
             headers: RequestHeader::HEADERS,
             userpwd: credentials
