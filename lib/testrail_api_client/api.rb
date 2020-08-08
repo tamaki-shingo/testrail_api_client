@@ -14,7 +14,7 @@ require 'testrail_api_client/api/projects'
 # require 'testrail_api_client/api/tests'
 # require 'testrail_api_client/api/users'
 
-module TestrailApiClient
+module TestRailApiClient
   class Client
     module API
     #   include TestRailAPIClient::Client::CaseFields

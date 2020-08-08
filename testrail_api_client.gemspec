@@ -2,7 +2,7 @@ require_relative 'lib/testrail_api_client/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "testrail_api_client"
-  spec.version       = TestrailApiClient::VERSION
+  spec.version       = TestRailApiClient::VERSION
   spec.authors       = ["Shingo Tamaki"]
   spec.email         = ["shingo.tamaki@gmail.com"]
 
