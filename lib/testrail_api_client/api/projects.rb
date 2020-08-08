@@ -1,4 +1,4 @@
-module TestRailAPIClient
+module TestRail
   class Client
     # Methods for the Projects API
     #
@@ -11,7 +11,7 @@ module TestRailAPIClient
         get('get_projects')
       end
 
-      # TODO: finish docs
+      # Returns the list of available projects ids
       def projects_ids
         projects.map { |x| x['id'] }
       end
