@@ -2,7 +2,7 @@ module TestRail
   class Client
     # Methods for the Sections API
     #
-    # @see http://docs.gurock.com/testrail-api2/reference-sections
+    # @see https://www.gurock.com/testrail/docs/api/reference/sections
     # Use the following API methods to request details about sections and to create or modify sections.
     # Sections are used to group and organize test cases in test suites.
     module Sections

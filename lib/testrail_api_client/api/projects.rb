@@ -2,7 +2,7 @@ module TestRail
   class Client
     # Methods for the Projects API
     #
-    # @see http://docs.gurock.com/testrail-api2/reference-projects
+    # @see https://www.gurock.com/testrail/docs/api/reference/projects
     module Projects
       #
       # Returns the list of available projects.

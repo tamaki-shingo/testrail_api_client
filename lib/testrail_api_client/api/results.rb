@@ -4,14 +4,14 @@ module TestRail
     # Methods for the Results API
     # Use the following API methods to request details about test results and to add new test results.
     #
-    # @see http://docs.gurock.com/testrail-api2/reference-results
+    # @see https://www.gurock.com/testrail/docs/api/reference/results
     module Results
       #
       # Returns a list of test results for a test.
       #
       # @param [Integer, String] test_id  The ID of the test
       # @return a list of test results for a test
-      # @see http://docs.gurock.com/testrail-api2/reference-results#get_results
+      # @see https://www.gurock.com/testrail/docs/api/reference/results#get_results
       def results(test_id)
         get("get_results/#{test_id}")
       end
@@ -63,7 +63,7 @@ module TestRail
       # @option data [Array<Integer>, Array<String>] :defects A comma-separated list of defects to link to the test result
       # @option data [Integer, String] :assignedto_id The ID of a user the test should be assigned to
       # @return the new test result using the same response format as get_results, but with a single result instead of a list of results.
-      # @see http://docs.gurock.com/testrail-api2/reference-results#add_result
+      # @see https://www.gurock.com/testrail/docs/api/reference/results#add_result
       def add_result(test_id, data = {})
         post("add_result/#{test_id}", body: data.to_json)
       end

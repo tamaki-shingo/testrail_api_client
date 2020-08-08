@@ -2,7 +2,7 @@ module TestRail
   class Client
     # Methods for the Users API
     #
-    # @see http://docs.gurock.com/testrail-api2/reference-users
+    # @see https://www.gurock.com/testrail/docs/api/reference/users
     module Users
       #
       # Returns an existing user.

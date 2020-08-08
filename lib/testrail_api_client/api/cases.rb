@@ -3,13 +3,13 @@ module TestRail
     # Methods for the Cases API
     #
     # Use the following API methods to request details about test cases and to create or modify test cases.
-    # @see http://docs.gurock.com/testrail-api2/reference-cases
+    # @see https://www.gurock.com/testrail/docs/api/reference/cases
     module Cases
       # Returns an existing test case
       #
       # @param case_id [Integer, String] The ID of the test case
       # @return [Hash] an existing test case
-      # @see http://docs.gurock.com/testrail-api2/reference-cases#get_case
+      # @see https://www.gurock.com/testrail/docs/api/reference/cases#get_case
       def case(case_id)
         get("get_case/#{case_id}")
       end
@@ -33,7 +33,7 @@ module TestRail
       # @return a list of test cases for a test suite or specific section in a test suite.
       # The response includes an array of test cases.
       # Each test case in this list follows the same format as TestRail#Client#Cases#case
-      # @see http://docs.gurock.com/testrail-api2/reference-cases#get_cases
+      # @see https://www.gurock.com/testrail/docs/api/reference/cases#get_cases
       def cases(project_id, suite_id, filters = {})
         get("get_cases/#{project_id}&suite_id=#{suite_id}",
             params: {
@@ -63,7 +63,7 @@ module TestRail
       # @option filters [String]            :refs           A comma-separated list of references/requirements
       # @return [Hash] created case
       # TODO: finish custom fields
-      # @see http://docs.gurock.com/testrail-api2/reference-cases#add_case
+      # @see https://www.gurock.com/testrail/docs/api/reference/cases#add_case
       def add_case(section_id, filters = {})
         post("add_case/#{section_id}",
              body: {

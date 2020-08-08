@@ -3,14 +3,14 @@ module TestRail
     # Methods for the Tests API
     # Use the following API methods to request details about tests.
     #
-    # @see http://docs.gurock.com/testrail-api2/reference-tests
+    # @see https://www.gurock.com/testrail/docs/api/reference/tests
     module Tests
       #
       # Returns an existing test by its ID
       #
       # @param [Integer, String] test_id  The ID of the test
       # @return an existing test by its ID
-      # @see http://docs.gurock.com/testrail-api2/reference-runs#add_run
+      # @see https://www.gurock.com/testrail/docs/api/reference/runs#add_run
       def test(test_id)
         get("get_test/#{test_id}")
       end
@@ -32,7 +32,7 @@ module TestRail
       # @param [Integer, String] run_id The ID of the test run
       # @option [String] status_id
       # @return an existing test by its ID
-      # @see http://docs.gurock.com/testrail-api2/reference-runs#add_run
+      # @see https://www.gurock.com/testrail/docs/api/reference/runs#add_run
       def tests(run_id)
         get("get_tests/#{run_id}")
       end

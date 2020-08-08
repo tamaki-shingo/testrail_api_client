@@ -2,7 +2,7 @@ module TestRail
   class Client
     # Methods for the Runs API
     #
-    # @see http://docs.gurock.com/testrail-api2/reference-runs
+    # @see https://www.gurock.com/testrail/docs/api/reference/runs
     # Use the following API methods to request details about test runs and to create or modify test runs.
     module Runs
       #
@@ -37,7 +37,7 @@ module TestRail
       # @option data [Boolean]          :include_all    True for including all test cases of the test suite and false for a custom case selection (default: true)
       # @option data [Array<Integer>]   :case_ids       An array of case IDs for the custom case selection
       # @return # TODO:
-      # @see http://docs.gurock.com/testrail-api2/reference-runs#add_run
+      # @see https://www.gurock.com/testrail/docs/api/reference/runs#add_run
       def add_run(project_id, data = {})
         post("add_run/#{project_id}", body: data.to_json)
       end

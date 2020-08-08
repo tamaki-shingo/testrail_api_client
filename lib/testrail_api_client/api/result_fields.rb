@@ -2,7 +2,7 @@ module TestRail
   class Client
     # Methods for the Result Fields API
     #
-    # @see http://docs.gurock.com/testrail-api2/reference-results-fields
+    # @see https://www.gurock.com/testrail/docs/api/reference/results-fields
     module ResultFields
       # TODO: implement
     end

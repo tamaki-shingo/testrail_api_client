@@ -2,7 +2,7 @@ module TestRail
   class Client
     # Methods for the Suites API
     #
-    # @see http://docs.gurock.com/testrail-api2/reference-suites
+    # @see https://www.gurock.com/testrail/docs/api/reference/suites
     # Use the following API methods to request details about test suites and to create or modify test suites.
     module Suites
       #
