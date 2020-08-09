@@ -14,24 +14,21 @@ require 'testrail_api_client/api/projects'
 # require 'testrail_api_client/api/tests'
 # require 'testrail_api_client/api/users'
 
-module TestRailApiClient
-  class Client
-    module API
-    #   include TestRailAPIClient::Client::CaseFields
-    #   include TestRailAPIClient::Client::CaseTypes
-    #   include TestRailAPIClient::Client::Cases
-    #   include TestRailAPIClient::Client::Milestones
-    #   include TestRailAPIClient::Client::Plans
-    #   include TestRailAPIClient::Client::Priorities
-      include TestRailAPIClient::Client::Projects
-    #   include TestRailAPIClient::Client::ResultFields
-    #   include TestRailAPIClient::Client::Results
-    #   include TestRailAPIClient::Client::Runs
-    #   include TestRailAPIClient::Client::Sections
-    #   include TestRailAPIClient::Client::Statuses
-    #   include TestRailAPIClient::Client::Suites
-    #   include TestRailAPIClient::Client::Tests
-    #   include TestRailAPIClient::Client::Users
-    end
-  end
+
+module API
+#   include CaseFields
+#   include CaseTypes
+#   include Cases
+#   include Milestones
+#   include Plans
+#   include Priorities
+    include Projects
+#   include ResultFields
+#   include Results
+#   include Runs
+#   include Sections
+#   include Statuses
+#   include Suites
+#   include Tests
+#   include Users
 end

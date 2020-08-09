@@ -4,7 +4,7 @@ require 'testrail_api_client/api'
 
 module TestRailApiClient
   class Client
-    include TestRailApiClient::Client::API
+    include API
 
     def initialize(url, user, password)
       @url      = url
