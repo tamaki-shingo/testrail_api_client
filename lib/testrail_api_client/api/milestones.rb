@@ -3,12 +3,12 @@ module TestRailApiClient
     #
     # @see https://www.gurock.com/testrail/docs/api/reference/milestones
     module Milestones
-        def get_milestone
-            # TODO
+        def milestone(milestone_id)
+            get("get_milestone/#{milestone_id}")
         end
 
-        def get_milestones
-            # TODO
+        def milestones(project_id)
+            get("get_milestones/#{project_id}")
         end
 
         def add_milestone
