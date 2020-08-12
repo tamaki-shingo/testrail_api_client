@@ -62,8 +62,8 @@ module TestRailApiClient
         # @option data [Integer, String] :assignedto_id The ID of a user the test should be assigned to
         # @return the new test result using the same response format as get_results, but with a single result instead of a list of results.
         # @see https://www.gurock.com/testrail/docs/api/reference/results#add_result
-        def add_result(test_id, data = {})
-            post("add_result/#{test_id}", body: data.to_json)
+        def add_result(test_id, opt)
+            post("add_result/#{test_id}", opt)
         end
 
         #
@@ -80,8 +80,8 @@ module TestRailApiClient
         # :run_id   The ID of the test run
         # :case_id  The ID of the test case
         #
-        def add_result_for_case(run_id, case_id, data = {})
-            post("add_result_for_case/#{run_id}/#{case_id}", body: data.to_json)
+        def add_result_for_case(run_id, case_id, opt)
+            post("add_result_for_case/#{run_id}/#{case_id}", opt)
         end
 
         #
@@ -90,8 +90,8 @@ module TestRailApiClient
         #
         # :run_id	The ID of the test run
         #
-        def add_results(run_id, data = {})
-            post("add_results/#{run_id}", body: data.to_json)
+        def add_results(run_id, opt)
+            post("add_results/#{run_id}", opt)
         end
 
         #
@@ -100,8 +100,8 @@ module TestRailApiClient
         #
         # :run_id The ID of the test run the results should be added to
         #
-        def add_results_for_cases(run_id, data = {})
-            post("add_results_for_cases/#{run_id}", body: data.to_json)
+        def add_results_for_cases(run_id, opt)
+            post("add_results_for_cases/#{run_id}", opt)
         end
     end
 end
