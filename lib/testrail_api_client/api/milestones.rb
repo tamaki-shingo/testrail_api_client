@@ -23,12 +23,17 @@ module TestRailApiClient
             post("add_milestone/#{project_id}", opt)
         end
 
-        def update_milestone
-            # TODO
+        # Parameters
+        # is_completed  bool	    True if a milestone is considered completed and false otherwise
+        # is_started    bool	    True if a milestone is considered started and false otherwise
+        # parent_id     int	        The ID of the parent milestone, if any (for sub-milestones) (available since TestRail 5.3)
+        # start_on      timestamp   The scheduled start date of the milestone (as UNIX timestamp) (available since TestRail 5.3)
+        def update_milestone(milestone_id, opt)
+            post("update_milestone/#{milestone_id}", opt)
         end
         
-        def delete_milestone
-            # TODO
+        def delete_milestone(milestone_id)
+            post("delete_milestone/#{milestone_id}")
         end
     end
 end
