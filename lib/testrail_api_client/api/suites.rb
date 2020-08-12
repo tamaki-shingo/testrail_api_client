@@ -36,8 +36,8 @@ module TestRailApiClient
         #
         # :project_id	The ID of the project the test suite should be added to
         #
-        def add_suite(project_id, data = {})
-            post("add_suite/#{project_id}", body: data.to_json)
+        def add_suite(project_id, opt)
+            post("add_suite/#{project_id}", opt)
         end
     end
 end
