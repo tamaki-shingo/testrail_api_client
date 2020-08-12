@@ -34,10 +34,14 @@ module TestRailApiClient
         end
 
         # Parameters
-        # plan_id	The ID of the plan the test runs should be added to
-        # entry_id	The ID of the test plan entry                
-        def add_run_to_plan_entry(plan_id, entry_id)
-            post("add_run_to_plan_entry/#{plan_id}/#{entry_id}")
+        # config_ids	array	An array of configuration IDs used for the test run of the test plan entry (Required)
+        # description	text	The description of the test run
+        # assignedto_id	int	The ID of the user the test run should be assigned to
+        # include_all	bool	True for including all test cases of the test suite and false for a custom case selection
+        # case_ids	array	An array of case IDs for the custom case selection (Required if include_all is false)
+        # refs	string	A comma-separated list of references/requirements        
+        def add_run_to_plan_entry(plan_id, entry_id, opt)
+            post("add_run_to_plan_entry/#{plan_id}/#{entry_id}", opt)
         end
 
         # Parameters
