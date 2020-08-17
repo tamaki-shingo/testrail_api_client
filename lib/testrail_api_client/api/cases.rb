@@ -13,40 +13,40 @@ module TestRailApiClient
             get("get_case/#{case_id}")
         end
 
-        #
-        # Returns a list of test cases for a test suite or specific section in a test suite.
-        #
-        # @param project_id [Integer, String] The ID of the project the test run should be added to
-        # @param suite_id [Integer, String] The ID of the test suite (optional if the project is operating in single suite mode)
-        # @param filters [Hash] A customizable set of filters
-        # @option filters [Integer, String]   :section_id       The ID of the section
-        # @option filters [Integer, String]   :created_after    Only return test cases created after this date (as UNIX timestamp).
-        # @option filters [Integer, String]   :created_before   Only return test cases created before this date (as UNIX timestamp).
-        # @option filters [Array<Integer>]    :created_by       A comma-separated list of creators (user IDs) to filter by.
-        # @option filters [Array<Integer>]    :milestone_id     A comma-separated list of milestone IDs to filter by (not available if the milestone field is disabled for the project).
-        # @option filters [Array<Integer>]    :priority_id      A comma-separated list of priority IDs to filter by.
-        # @option filters [Array<Integer>]    :type_id          A comma-separated list of case type IDs to filter by.
-        # @option filters [Integer, String]   :updated_after    Only return test cases updated after this date (as UNIX timestamp).
-        # @option filters [Integer, String]   :updated_before   Only return test cases updated before this date (as UNIX timestamp).
-        # @option filters [Array<Integer>]    :updated_by       A comma-separated list of users who updated test cases to filter by.
-        # @return a list of test cases for a test suite or specific section in a test suite.
-        # The response includes an array of test cases.
-        # Each test case in this list follows the same format as TestRail#Client#Cases#case
+        # :created_after	timestamp	Only return test cases created after this date (as UNIX timestamp).
+        # :created_before	timestamp	Only return test cases created before this date (as UNIX timestamp).
+        # :created_by	integer (list)	A comma-separated list of creators (user IDs) to filter by.
+        # :filter	string	Only return cases with matching filter string in the case title
+        # :limit	integer	The number of test cases the response should return
+        # :milestone_id	integer (list)	A comma-separated list of milestone IDs to filter by (not available if the milestone field is disabled for the project).
+        # :offset	integer	Where to start counting the tests cases from (the offset)
+        # :priority_id	integer (list)	A comma-separated list of priority IDs to filter by.
+        # :section_id	integer	The ID of a test case section
+        # :template_id	integer (list)	A comma-separated list of template IDs to filter by (requires TestRail 5.2 or later)
+        # :type_id	integer (list)	A comma-separated list of case type IDs to filter by.
+        # :updated_after	timestamp	Only return test cases updated after this date (as UNIX timestamp).
+        # :updated_before	timestamp	Only return test cases updated before this date (as UNIX timestamp).
+        # :updated_by	integer (list)	A comma-separated list of user IDs who updated test cases to filter by.        
         # @see https://www.gurock.com/testrail/docs/api/reference/cases#get_cases
         def cases(project_id, suite_id, filters = {})
             get("get_cases/#{project_id}&suite_id=#{suite_id}",
-                params: {
-                    section_id:     filters[:section_id],
+                {
                     created_after:  filters[:created_after],
                     created_before: filters[:created_before],
                     created_by:     filters[:created_by].to_list,
+                    filter:         filters[:filter],
+                    limit:          filters[:limit],
                     milestone_id:   filters[:milestone_id].to_list,
+                    offset:         filters[:offset],
                     priority_id:    filters[:priority_id].to_list,
+                    section_id:     filters[:section_id],
+                    template_id:    filters[:template_id].to_list,
                     type_id:        filters[:type_id].to_list,
                     updated_after:  filters[:updated_after],
                     updated_before: filters[:updated_before],
                     updated_by:     filters[:updated_by].to_list
-                })
+                }
+            )
         end
 
         #

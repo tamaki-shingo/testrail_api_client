@@ -1,6 +1,8 @@
 require 'testrail_api_client/gurock/testrail'
 require 'testrail_api_client/version'
 require 'testrail_api_client/api'
+require 'testrail_api_client/ext/extensions'
+require 'net/http'
 
 module TestRailApiClient
   class Client
@@ -12,8 +14,10 @@ module TestRailApiClient
       @password = password
     end
 
-    def get(path)
-      testrail.send_get(path)
+    def get(path, opts = {})
+      query = URI.encode_www_form(opts)
+      query = "&" + query if query != ""
+      testrail.send_get("#{path}#{query}")
     end
 
     def post(path, opts = {})
