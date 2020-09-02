@@ -3,18 +3,10 @@ module TestRailApiClient
     #
     # @see https://www.gurock.com/testrail/docs/api/reference/projects
     module Projects
-        #
-        # Returns an existing project by its ID.
-        #
-        # :project_id  The ID of the project
-        #
         def project(project_id)
             get("get_project/#{project_id}")
         end
-
-        #
-        # Returns the list of available projects.
-        #
+        
         def projects
             get('get_projects')
         end

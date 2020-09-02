@@ -2,13 +2,7 @@ module TestRailApiClient
     # Methods for the Suites API
     #
     # @see https://www.gurock.com/testrail/docs/api/reference/suites
-    # Use the following API methods to request details about test suites and to create or modify test suites.
     module Suites
-        #
-        # Returns an existing test suite.
-        #
-        # :suite_id	The ID of the test suite
-        #
         def suite(suite_id)
             get("get_suite/#{suite_id}")
         end
@@ -17,11 +11,6 @@ module TestRailApiClient
             suites(project_id).find { |suite| suite['name'].casecmp(suite_name) == 0 }
         end
 
-        #
-        # Returns a list of test suites for a project.
-        #
-        # :project_id	The ID of the project
-        #
         def suites(project_id)
             get("get_suites/#{project_id}")
         end
@@ -31,11 +20,6 @@ module TestRailApiClient
             suites(project_id)
         end
 
-        #
-        # Creates a new test suite.
-        #
-        # :project_id	The ID of the project the test suite should be added to
-        #
         def add_suite(project_id, opt)
             post("add_suite/#{project_id}", opt)
         end
