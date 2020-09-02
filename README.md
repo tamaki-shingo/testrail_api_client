@@ -9,7 +9,7 @@ You can check which APIs are supported on this [wiki](https://github.com/tamaki-
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'testrail_api_client'
+gem 'testrail_api_client', git: 'git@github.com:tamaki-shingo/testrail_api_client.git'
 ```
 
 And then execute:
@@ -19,6 +19,8 @@ And then execute:
 Or install it yourself as:
 
     $ gem install testrail_api_client
+
+⚠️ testrail_api_client isn't publish to ruby gems yet. It will be publish It will be publish in the future.
 
 ## Usage
 
