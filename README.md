@@ -55,3 +55,8 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/tamaki
 ## Code of Conduct
 
 Everyone interacting in the TestrailApiClient project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/tamaki-shingo/testrail_api_client/blob/master/CODE_OF_CONDUCT.md).
+
+
+## Thanks
+testrail_api_client inspired by [testrail_api](https://github.com/kirillzh/testrail_api).
+that library alredy archived. so I made testrail_api_client to supports more APIs.
