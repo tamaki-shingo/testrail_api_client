@@ -1,8 +1,7 @@
 # TestrailApiClient
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/testrail_api_client`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This is implimentation of client for testrail API.
+It suports [TestRail API](https://www.gurock.com/testrail/docs/api/reference) but not all APIs yet.
 
 ## Installation
 
@@ -22,7 +21,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Initialize
+```
+url  = "https://example.testrail.com"
+user = "your_user"
+pass = "your_password"
+client = TestRailApiClient::Client.new(url, user, pass)
+
+# GET
+projects = client.projects
+
+# POST
+project_id = 1
+param = 
+{
+    "name": "Milestone sample",
+    "description": "Hello Milestone"
+}
+client.add_milestone(project_id, param)
+```
 
 ## Development
 
@@ -32,9 +49,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/testrail_api_client. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/testrail_api_client/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/tamaki-shingo/testrail_api_client. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/tamaki-shingo/testrail_api_client/blob/master/CODE_OF_CONDUCT.md).
 
 
 ## Code of Conduct
 
-Everyone interacting in the TestrailApiClient project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/testrail_api_client/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the TestrailApiClient project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/tamaki-shingo/testrail_api_client/blob/master/CODE_OF_CONDUCT.md).
