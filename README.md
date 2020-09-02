@@ -21,7 +21,6 @@ Or install it yourself as:
 
 ## Usage
 
-### Initialize
 ```
 url  = "https://example.testrail.com"
 user = "your_user"
