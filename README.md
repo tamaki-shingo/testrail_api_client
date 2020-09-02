@@ -2,6 +2,7 @@
 
 This is implimentation of client for testrail API.
 It suports [TestRail API](https://www.gurock.com/testrail/docs/api/reference) but not all APIs yet.
+You can check which APIs are supported on this [wiki](https://github.com/tamaki-shingo/testrail_api_client/wiki/Support-API).
 
 ## Installation
 
