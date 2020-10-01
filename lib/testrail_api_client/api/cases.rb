@@ -41,10 +41,8 @@ module TestRailApiClient
                         }.to_json)
         end
 
-        def update_case(case_id, body = {})
-            body[:type_id]     = body[:type_id].to_list if body[:type_id]
-            body[:priority_id] = body[:priority_id].to_list if body[:type_id]
-            post("update_case/#{case_id}", body: body.to_json)
+        def update_case(case_id, opt = {})
+            post("update_case/#{case_id}", opt)
         end
 
         def delete_case(case_id)
