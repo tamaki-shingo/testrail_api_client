@@ -15,12 +15,12 @@ module TestRailApiClient
           sections(project_id, suite_id).find { |section| section['name'] == section_name }
         end
 
-        def add_section(project_id, data = {})
-            post("add_section/#{project_id}", body: data.to_json)
+        def add_section(project_id, opt)
+            post("add_section/#{project_id}", opt)
         end
 
-        def update_section(section_id, data = {})
-            post("update_section/#{section_id}", body: data.to_json)
+        def update_section(section_id, opt)
+            post("update_section/#{section_id}", opt)
         end
 
         def delete_section(section_id)
