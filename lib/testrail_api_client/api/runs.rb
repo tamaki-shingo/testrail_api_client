@@ -11,12 +11,12 @@ module TestRailApiClient
            get("get_runs/#{project_id}")
         end
 
-        def add_run(project_id, data = {})
-            post("add_run/#{project_id}", body: data.to_json)
+        def add_run(project_id, opt)
+            post("add_run/#{project_id}", opt)
         end
 
-        def update_run(run_id, data = {})
-           post("update_run/#{run_id}", body: data.to_json)
+        def update_run(run_id, opt)
+           post("update_run/#{run_id}", opt)
         end
 
         def close_run(run_id)
