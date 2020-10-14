@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module TestRailApiClient
   # Methods for the Reports API
   #
@@ -6,7 +8,7 @@ module TestRailApiClient
     def get_reports(project_id)
       # TODO
     end
-    
+
     def run_report(report_template_id)
       # TODO
     end

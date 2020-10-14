@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module TestRailApiClient
   # Methods for the Tests API
   #
@@ -8,13 +10,13 @@ module TestRailApiClient
     end
 
     def test_by_title(run_id, test_title)
-      tests(run_id).find { |test| test['title'].casecmp(test_title) == 0 }
+      tests(run_id).find { |test| test['title'].casecmp(test_title).zero? }
     end
 
     def test_id_by_title(run_id, test_title)
-       test_by_title(run_id, test_title)['id']
+      test_by_title(run_id, test_title)['id']
     end
-    
+
     def tests(run_id)
       get("get_tests/#{run_id}")
     end

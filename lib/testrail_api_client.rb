@@ -6,31 +6,32 @@ require 'net/http'
 
 module TestRailApiClient
   class Client
-  include TestRailApiClient::API
+    include TestRailApiClient::API
 
-  def initialize(url, user, password)
-    @url    = url
-    @user   = user
-    @password = password
-  end
+    def initialize(url, user, password)
+      @url    = url
+      @user   = user
+      @password = password
+    end
 
-  def get(path, opts = {})
-    query = URI.encode_www_form(opts)
-    query = "&" + query if query != ""
-    testrail.send_get("#{path}#{query}")
-  end
+    def get(path, opts = {})
+      query = URI.encode_www_form(opts)
+      query = '&' + query if query != ''
+      testrail.send_get("#{path}#{query}")
+    end
 
-  def post(path, opts = {})
-    testrail.send_post(path, opts)
-  end
+    def post(path, opts = {})
+      testrail.send_post(path, opts)
+    end
 
-  private
-  def testrail
-    testrail = TestRail::APIClient.new(@url)
-    testrail.user = @user
-    testrail.password = @password
-    return testrail
-  end
+    private
+
+    def testrail
+      testrail = TestRail::APIClient.new(@url)
+      testrail.user = @user
+      testrail.password = @password
+      testrail
+    end
   end
   class Error < StandardError; end
 end

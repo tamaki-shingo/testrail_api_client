@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module TestRailApiClient
   # Methods for the Projects API
   #
@@ -6,7 +8,7 @@ module TestRailApiClient
     def project(project_id)
       get("get_project/#{project_id}")
     end
-    
+
     def projects
       get('get_projects')
     end
@@ -18,7 +20,7 @@ module TestRailApiClient
     def update_project 
       # TODO
     end
-    
+
     def delete_project
       # TODO
     end
@@ -37,7 +39,7 @@ module TestRailApiClient
     # :project_name  The name of the project
     #
     def project_by_name(project_name)
-      projects.find { |project| project['name'].casecmp(project_name) == 0 }
+      projects.find { |project| project['name'].casecmp(project_name).zero? }
     end
   end
 end

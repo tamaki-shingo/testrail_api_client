@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module TestRailApiClient
   # Methods for the Runs API
   #
@@ -8,7 +10,7 @@ module TestRailApiClient
     end
 
     def runs(project_id)
-       get("get_runs/#{project_id}")
+      get("get_runs/#{project_id}")
     end
 
     def add_run(project_id, opt)
@@ -16,7 +18,7 @@ module TestRailApiClient
     end
 
     def update_run(run_id, opt)
-       post("update_run/#{run_id}", opt)
+      post("update_run/#{run_id}", opt)
     end
 
     def close_run(run_id)
@@ -24,7 +26,7 @@ module TestRailApiClient
     end
 
     def delete_run(run_id)
-       post("delete_run/#{run_id}")
+      post("delete_run/#{run_id}")
     end
   end
 end

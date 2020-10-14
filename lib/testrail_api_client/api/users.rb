@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module TestRailApiClient
   # Methods for the Users API
   #

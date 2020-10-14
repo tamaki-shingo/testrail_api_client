@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module TestRailApiClient
   # Methods for the Milestones API
   #
@@ -18,7 +20,7 @@ module TestRailApiClient
     def update_milestone(milestone_id, opt)
       post("update_milestone/#{milestone_id}", opt)
     end
-    
+
     def delete_milestone(milestone_id)
       post("delete_milestone/#{milestone_id}")
     end

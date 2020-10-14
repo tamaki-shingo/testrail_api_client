@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module TestRailApiClient
   # Methods for the Case Types API
   #
@@ -9,4 +11,3 @@ module TestRailApiClient
     end
   end
 end
-

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module TestRailApiClient
   # Methods for the Suites API
   #
@@ -8,7 +10,7 @@ module TestRailApiClient
     end
 
     def suite_by_name(project_id, suite_name)
-      suites(project_id).find { |suite| suite['name'].casecmp(suite_name) == 0 }
+      suites(project_id).find { |suite| suite['name'].casecmp(suite_name).zero? }
     end
 
     def suites(project_id)
