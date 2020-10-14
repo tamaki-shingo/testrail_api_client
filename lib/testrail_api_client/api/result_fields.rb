@@ -5,7 +5,7 @@ module TestRailApiClient
   #
   # @see https://www.gurock.com/testrail/docs/api/reference/results-fields
   module ResultFields
-    def get_result_fields
+    def result_fields
       # TODO
     end
   end

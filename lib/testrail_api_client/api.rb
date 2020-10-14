@@ -19,6 +19,7 @@ require 'testrail_api_client/api/tests'
 require 'testrail_api_client/api/users'
 
 module TestRailApiClient
+  # API includes each TestRail APIs
   module API
     include TestRailApiClient::Attachments
     include TestRailApiClient::CaseFields

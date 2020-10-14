@@ -11,7 +11,7 @@ module TestRailApiClient
     end
 
     def cases(project_id, suite_id, filters = {})
-      get("get_cases/#{project_id}&suite_id=#{suite_id}", {
+      opt = {
         created_after: filters[:created_after],
         created_before: filters[:created_before],
         created_by: filters[:created_by].to_list,
@@ -26,18 +26,20 @@ module TestRailApiClient
         updated_after: filters[:updated_after],
         updated_before: filters[:updated_before],
         updated_by: filters[:updated_by].to_list
-      })
+      }
+      get("get_cases/#{project_id}&suite_id=#{suite_id}", opt)
     end
 
     def add_case(section_id, filters = {})
-      post("add_case/#{section_id}", {
+      opt = {
         title: filters[:title],
         type_id: filters[:type_id].to_list,
         priority_id: filters[:priority_id].to_list,
         estimate: filters[:estimate],
         milestone_id: filters[:milestone_id],
         refs: filters[:refs]
-      })
+      }
+      post("add_case/#{section_id}", opt)
     end
 
     def update_case(case_id, opt = {})

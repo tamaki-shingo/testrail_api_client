@@ -5,6 +5,7 @@ require 'testrail_api_client/ext/extensions'
 require 'net/http'
 
 module TestRailApiClient
+  # Client of TestRail API
   class Client
     include TestRailApiClient::API
 
