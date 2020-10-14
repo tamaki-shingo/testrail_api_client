@@ -19,25 +19,25 @@ require 'testrail_api_client/api/tests'
 require 'testrail_api_client/api/users'
 
 module TestRailApiClient
-    module API
-        include TestRailApiClient::Attachments
-        include TestRailApiClient::CaseFields
-        include TestRailApiClient::CaseTypes
-        include TestRailApiClient::Cases
-        include TestRailApiClient::Configurations
-        include TestRailApiClient::Milestones
-        include TestRailApiClient::Plans
-        include TestRailApiClient::Priorities
-        include TestRailApiClient::Projects
-        include TestRailApiClient::Reports
-        include TestRailApiClient::ResultFields
-        include TestRailApiClient::Results
-        include TestRailApiClient::Runs
-        include TestRailApiClient::Sections
-        include TestRailApiClient::Statuses
-        include TestRailApiClient::Suites
-        include TestRailApiClient::Templates
-        include TestRailApiClient::Tests
-        include TestRailApiClient::Users
-    end
+  module API
+    include TestRailApiClient::Attachments
+    include TestRailApiClient::CaseFields
+    include TestRailApiClient::CaseTypes
+    include TestRailApiClient::Cases
+    include TestRailApiClient::Configurations
+    include TestRailApiClient::Milestones
+    include TestRailApiClient::Plans
+    include TestRailApiClient::Priorities
+    include TestRailApiClient::Projects
+    include TestRailApiClient::Reports
+    include TestRailApiClient::ResultFields
+    include TestRailApiClient::Results
+    include TestRailApiClient::Runs
+    include TestRailApiClient::Sections
+    include TestRailApiClient::Statuses
+    include TestRailApiClient::Suites
+    include TestRailApiClient::Templates
+    include TestRailApiClient::Tests
+    include TestRailApiClient::Users
+  end
 end
