@@ -5,18 +5,19 @@ require 'testrail_api_client/ext/extensions'
 require 'net/http'
 
 module TestRailApiClient
+  # Client of TestRail API
   class Client
     include TestRailApiClient::API
 
     def initialize(url, user, password)
-      @url      = url
-      @user     = user
+      @url    = url
+      @user   = user
       @password = password
     end
 
     def get(path, opts = {})
       query = URI.encode_www_form(opts)
-      query = "&" + query if query != ""
+      query = '&' + query if query != ''
       testrail.send_get("#{path}#{query}")
     end
 
@@ -25,11 +26,12 @@ module TestRailApiClient
     end
 
     private
+
     def testrail
       testrail = TestRail::APIClient.new(@url)
       testrail.user = @user
       testrail.password = @password
-      return testrail
+      testrail
     end
   end
   class Error < StandardError; end
