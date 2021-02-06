@@ -75,11 +75,13 @@ module TestRail
 			if method == 'POST'
 				request = Net::HTTP::Post.new(url.path + '?' + url.query)
 					if uri.start_with?('add_attachment')
+            filename = data.respond_to?(:filename) ? data.filename : data
+
 						# SOURCE: https://yukimotopress.github.io/http
 						boundary = "TestRailAPIAttachmentBoundary"
 						post_body = []
 						post_body << "--#{boundary}\r\n"
-						post_body << "Content-Disposition: form-data; name=\"attachment\"; filename=\"#{File.basename(data)}\"\r\n"
+						post_body << "Content-Disposition: form-data; name=\"attachment\"; filename=\"#{File.basename(filename)}\"\r\n"
 						post_body << "\r\n"
 						post_body << File.open(data, 'rb') {|io| io.read}
 						post_body << "\r\n--#{boundary}--\r\n"
