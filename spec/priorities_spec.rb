@@ -10,8 +10,11 @@ RSpec.describe TestRailApiClient do
 
   client = TestRailApiClient::Client.new(url, user, pass)
 
-  context '' do
-    it '' do
+  context 'Priorities' do
+    it 'can get priorities ' do
+      priorities = client.priorities
+      # Response is depends on your setting
+      expect(priorities).not_to be nil
     end
   end
 end
