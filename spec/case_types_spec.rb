@@ -10,8 +10,11 @@ RSpec.describe TestRailApiClient do
 
   client = TestRailApiClient::Client.new(url, user, pass)
 
-  context '' do
-    it '' do
+  context 'Case Types' do
+    it 'can get test case types' do
+      types = client.case_types
+      # Response is depends on your setting
+      expect(types).not_to be nil
     end
   end
 end
