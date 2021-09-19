@@ -9,5 +9,9 @@ module TestRailApiClient
     def case_fields
       get('get_case_fields')
     end
+
+    def add_case_field(opt)
+      post('add_case_field', opt)
+    end
   end
 end
