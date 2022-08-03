@@ -13,16 +13,16 @@ module TestRailApiClient
       get('get_projects')
     end
 
-    def add_project 
-      # TODO
+    def add_project(opt)
+      post('add_project', opt)
     end
 
-    def update_project 
-      # TODO
+    def update_project(project_id, opt)
+      post("update_project/#{project_id}", opt)
     end
 
-    def delete_project
-      # TODO
+    def delete_project(project_id)
+      post("delete_project/#{project_id}")
     end
   end
 
